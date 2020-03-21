@@ -35,14 +35,6 @@ module.exports = function(env) {
     module: {
       rules: [
         {
-          test: /favicon\.ico$/,
-          loader: 'url-loader',
-          query: { 
-            limit: 1,
-            name: '[name].[ext]',
-          },
-        },
-        {
           test: /\.svg$/,
           use: [
             {
@@ -59,7 +51,7 @@ module.exports = function(env) {
       ]
     },
     plugins: [
-      new HtmlWebpackPlugin({ template: 'index.ejs' })
+      new HtmlWebpackPlugin({ template: 'index.ejs', favicon: 'favicon.ico' })
     ]
   }
 }
