@@ -1,6 +1,9 @@
 <div class="d-flex  flex-column align-items-center justify-content-start">
-  <h1 id="header" class="mb-5 text-center w-100 position-sticky fixed-top">
-    You have <b> approximately</b>
+  <h1 id="fixed-header" class="mb-5 text-center w-100 position-sticky fixed-top">
+    <div id="header" class="p-3 mb-2">
+      Roll Tracker
+    </div>
+    You have <strong> approximately</strong>
     <br />
     <em
       if.bind="numberOfDaysTillOut > 5"
@@ -49,7 +52,7 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label">Sheets Per Pee</label>
+      <label class="control-label">Sheets per Pee</label>
       <input
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.sheetsPerPee"
@@ -75,7 +78,7 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label">💩s Per Day</label>
+      <label class="control-label">💩s per Day</label>
       <input
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.numberOfShitsPerDay"
@@ -84,7 +87,7 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label">Wipeable Pees Per Day</label>
+      <label class="control-label">Wipeable Pees per Day</label>
       <input
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.numberOfPeesPerDay"
@@ -98,9 +101,8 @@
         type="button"
         click.delegate="reset()"
       >
-        Reset 💩
+        Reset to Default 💩
       </button>
     </div>
-
   </div>
 </div>

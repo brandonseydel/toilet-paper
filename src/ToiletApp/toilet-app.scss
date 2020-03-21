@@ -1,14 +1,23 @@
-html{
-    font-size: .8rem;
-        padding-bottom: 50px;
+html {
+  font-size: 0.8rem;
+  padding-bottom: 50px;
 }
 
-.control-label{
-    font-size: 1.5em;
+.control-label {
+  font-size: 1.5em;
 }
 
-
-#header{
-    background-color: white;
-    box-shadow: 5px 5px 10px white;
+#fixed-header {
+  > #header {
+    background-color: black;
+    color: white;
+    // &:after {
+    //   content: url("/src/img/svg/toilet-paper.svg");
+    // }
+    // &:before {
+    //   content: url("/src/img/svg/toilet-paper.svg");
+    // }
+  }
+  box-shadow: 5px 20px 50px white;
+  background-color: white;
 }
