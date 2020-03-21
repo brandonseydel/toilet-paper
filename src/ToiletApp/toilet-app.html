@@ -1,0 +1,123 @@
+<div class="d-flex  flex-column align-items-center justify-content-start">
+  <h1 class="mb-5 text-center">
+    You have <b> approximately</b>
+    <br />
+    <em
+      if.bind="numberOfDaysTillOut > 5"
+      class="text-success"
+      style="font-size:2em;"
+    >
+      ${numberOfDaysTillOut.toFixed(0) || 0} days
+    </em>
+
+    <div if.bind="numberOfDaysTillOut <= 5" style="font-size:2em;">
+      ☠
+      <span class="text-danger" style="font-style:italic;">
+        ${numberOfDaysTillOut.toFixed(0) || 0} days
+      </span>
+      ☠
+    </div>
+
+    <div class="mt-2" style="font-size:.75em;">
+      till you are 💩'n in the 🛀 !
+    </div>
+  </h1>
+  <div class="col-sm-12 col-md-8">
+    <div class="form-group">
+      <label class="control-label"># of Rolls On Deck 🚽</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.numberOfRollsOnHand"
+        type="number"
+      />
+    </div>
+    <div class="form-group">
+      <label class="control-label">Sheets per Roll</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.numberOfSheetsPerRoll"
+        type="number"
+      />
+    </div>
+    <div class="form-group">
+      <label class="control-label">Sheets per 💩</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.sheetsPerShit"
+        type="number"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">Sheets Per Pee</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.sheetsPerPee"
+        type="number"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">Men in House</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.numberOfMenInHousehold"
+        type="number"
+      />
+    </div>
+    <div class="form-group">
+      <label class="control-label">Women in House</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.numberOfWomenInHousehold"
+        type="number"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">💩s Per Day</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.numberOfShitsPerDay"
+        type="number"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="control-label">Wipeable Pees Per Day</label>
+      <input
+        class="form-control form-control-lg"
+        value.bind="toiletTrackerModel.numberOfPeesPerDay"
+        type="number"
+      />
+    </div>
+    <div class="text-center">
+      <button
+        style="font-size: 1.2em;text-transform:inherit;"
+        class="m-0 btn blue-gradient btn-lg "
+        type="button"
+        click.delegate="reset()"
+      >
+        Reset 💩
+      </button>
+    </div>
+    <div class="form-group">
+      <!--Facebook-->
+      <a class="btn-floating btn-lg btn-fb" type="button" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <!--Twitter-->
+      <a class="btn-floating btn-lg btn-tw" type="button" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <!--Instagram-->
+      <a class="btn-floating btn-lg btn-ins" type="button" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <!--Github-->
+      <a class="btn-floating btn-lg btn-git" type="button" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </div>
+  </div>
+</div>
