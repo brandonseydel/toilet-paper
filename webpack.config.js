@@ -34,6 +34,14 @@ module.exports = function(env) {
     },
     module: {
       rules: [
+        {
+          test: /favicon\.ico$/,
+          loader: 'url-loader',
+          query: { 
+            limit: 1,
+            name: '[name].[ext]',
+          },
+        },
         {test: /\.(jpe?g|png|gif|svg)$/i, loader: "file-loader"},
         { test: /\.(scss|css)$/i, use: [ "style-loader", cssLoader, postcssLoader, { loader: "sass-loader", options: { sassOptions: { includePaths: ["node_modules"] } } } ] },
         { test: /\.ts$/i, use: ['ts-loader', '@aurelia/webpack-loader'], exclude: /node_modules/ },

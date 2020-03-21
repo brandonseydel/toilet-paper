@@ -9,7 +9,7 @@ const defaultShit: ToiletTrackerModel = {
     numberOfWomenInHousehold: 1,
     sheetsPerPee: 10,
     sheetsPerShit: 30,
-    numberOfSheetsPerRoll: 1000
+    numberOfSheetsPerRoll: 450
 };
 
 export class ToiletApp {
