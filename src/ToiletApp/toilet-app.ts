@@ -19,6 +19,7 @@ export class ToiletApp {
         if (this.toiletTrackerModel = JSON.parse(localStorage.getItem('toiletModel'))) return;
         this.toiletTrackerModel = { ...defaultShit };
     }
+
     toiletTrackerModel: ToiletTrackerModel;
     get numberOfDaysTillOut() {
         const model = this.toiletTrackerModel;
@@ -27,9 +28,8 @@ export class ToiletApp {
             (
                 (model.numberOfShitsPerDay * model.sheetsPerShit * ((model.numberOfMenInHousehold * 1) + (model.numberOfWomenInHousehold * 1))) +
                 (model.sheetsPerPee * model.numberOfWomenInHousehold * model.numberOfPeesPerDay)
-            )).toFixed(0);
+            ));
     }
-
 
     reset() {
         this.toiletTrackerModel = { ...defaultShit };
