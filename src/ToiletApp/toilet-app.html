@@ -13,13 +13,22 @@
       class="text-success"
       style="font-size:2em;"
     >
-      ${numberOfDaysTillOut.toFixed(0)} days
+      <span contenteditable textcontent.from-view="textContent & debounce:500">
+        ${numberOfDaysTillOut.toFixed(0)}
+      </span>
+      days
     </em>
 
     <div if.bind="numberOfDaysTillOut <= 5" style="font-size:2em;">
       ☠
-      <div contenteditable class="text-danger" style="font-style:italic;">
-        ${numberOfDaysTillOut.toFixed(0)} days
+      <div class="text-danger" style="font-style:italic;">
+        <span
+          contenteditable
+          textcontent.from-view="textContent & debounce:500"
+        >
+          ${numberOfDaysTillOut.toFixed(0)}
+        </span>
+        days
       </div>
       ☠
     </div>
@@ -37,6 +46,13 @@
         value.bind="toiletTrackerModel.numberOfRollsOnHand"
         type="number"
       />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.numberOfRollsOnHand"
+        type="range"
+        min="1"
+        max="10000"
+      />
     </div>
     <div class="form-group">
       <label class="control-label">Sheets per Roll</label>
@@ -45,6 +61,14 @@
         value.bind="toiletTrackerModel.numberOfSheetsPerRoll"
         type="number"
       />
+
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.numberOfSheetsPerRoll"
+        type="range"
+        min="1"
+        max="750"
+      />
     </div>
     <div class="form-group">
       <label class="control-label">Sheets per 💩</label>
@@ -52,6 +76,13 @@
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.sheetsPerShit"
         type="number"
+      />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.sheetsPerShit"
+        type="range"
+        min="1"
+        max="100"
       />
     </div>
 
@@ -62,6 +93,13 @@
         value.bind="toiletTrackerModel.sheetsPerPee"
         type="number"
       />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.sheetsPerPee"
+        type="range"
+        min="1"
+        max="50"
+      />
     </div>
 
     <div class="form-group">
@@ -71,6 +109,13 @@
         value.bind="toiletTrackerModel.numberOfMenInHousehold"
         type="number"
       />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.numberOfMenInHousehold"
+        type="range"
+        min="1"
+        max="10"
+      />
     </div>
     <div class="form-group">
       <label class="control-label">Women in House</label>
@@ -78,6 +123,13 @@
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.numberOfWomenInHousehold"
         type="number"
+      />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.numberOfWomenInHousehold"
+        type="range"
+        min="1"
+        max="10"
       />
     </div>
 
@@ -88,6 +140,13 @@
         value.bind="toiletTrackerModel.numberOfShitsPerDay"
         type="number"
       />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.numberOfShitsPerDay"
+        type="range"
+        min="1"
+        max="5"
+      />
     </div>
 
     <div class="form-group">
@@ -96,6 +155,13 @@
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.numberOfPeesPerDay"
         type="number"
+      />
+      <input
+        class="custom-range"
+        value.bind="toiletTrackerModel.numberOfPeesPerDay"
+        type="range"
+        min="1"
+        max="15"
       />
     </div>
     <div class="text-center">
@@ -125,7 +191,7 @@
       <a
         href="https://twitter.com/share?ref_src=twsrc%5Etfw"
         class="twitter-share-button"
-        data-text="Track you Rolls"
+        data-text="Track your Rolls"
         data-url="https://howmanywipes.com/"
         data-show-count="false"
         >Tweet</a
