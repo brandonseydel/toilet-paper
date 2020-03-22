@@ -5,7 +5,7 @@ const defaultShit: ToiletTrackerModel = {
     numberOfMenInHousehold: 1,
     numberOfPeesPerDay: 5,
     numberOfShitsPerDay: 1,
-    numberOfRollsOnHand: 1,
+    numberOfRollsOnHand: 2,
     numberOfWomenInHousehold: 1,
     sheetsPerPee: 10,
     sheetsPerShit: 30,
