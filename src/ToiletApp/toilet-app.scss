@@ -29,3 +29,24 @@ span[contenteditable] {
 .fb_iframe_widget span {
   height: 24px !important;
 }
+
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  margin-top: -5px;
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  margin-top: -5px;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  height: 15px;
+  width: 15px;
+  margin-top: -5px;
+}
