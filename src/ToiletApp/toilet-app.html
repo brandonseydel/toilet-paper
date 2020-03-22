@@ -42,16 +42,14 @@
       <input
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.numberOfRollsOnHand"
-        step="12"
         type="number"
       />
       <input
         class="custom-range w-50 mt-2"
         value.bind="toiletTrackerModel.numberOfRollsOnHand"
         type="range"
-        step="12"
         min="1"
-        max="10000"
+        max="200"
       />
     </div>
     <div class="form-group">
@@ -182,7 +180,7 @@
         Check your 💩
       </button>
     </div>
-    <div class="text-center align-middle mt-2">
+    <div class="text-center align-middle mt-5">
       <div
         class="fb-share-button"
         data-href="https://howmanywipes.com/"
@@ -197,5 +195,67 @@
         >Tweet</a
       >
     </div>
+    <div class="text-center">
+      <h3 class="mt-3">Did you know?</h3>
+      <hr />
+      <p class=" lead">
+        According to
+        <a
+          href="http://web.mit.edu/barryk/Public/MIT/2.744/experienceAnalysis/general.html"
+          >MIT</a
+        >...
+      </p>
+
+      <p class="font-italic lead">
+        <strong class="font-lg">44%</strong> wipe from front to back from behind
+        their backs. <br />
+        <strong class="font-lg">60%</strong> look at the paper after they wipe.
+        <br />
+        <strong class="font-lg">50%</strong> say that they have wiped with
+        leaves.
+        <br />
+        <strong class="font-lg">8% </strong>have wiped with their hands. <br />
+        <strong class="font-lg">2% </strong>have wiped with money. <br />
+        <br />
+        <strong class="font-lg">40%</strong> fold or stack, 40% wad or crumple,
+        20% wrap it around their hand. <br />
+        <strong class="font-lg">52%</strong> (Men) &amp; 38% (Women) are
+        "folders"
+        <br />
+        <strong class="font-lg">38%</strong> (Men) &amp; 52% (Women) are
+        "wadders"
+        <br />
+        <strong class="font-lg">6% </strong>(Men) &amp; 6% (Women) have no
+        preference <br />
+        <strong class="font-lg">4% </strong>(Men) &amp; 3% (Women) don't know
+      </p>
+      <h2>About</h2>
+      <hr />
+      <p class="lead">
+        Created by two dads who are tired of trying to go to the store to find
+        toilet paper. No one needs that much toilet paper and this website is
+        meant to show that there is enough to go around for everyone. Please do
+        not hoard more toilet paper than you will so so that everyone and their
+        family can have an opportunity to wipe their butts.
+      </p>
+      <p class="lead">
+        To find out how much toilet paper you actually need, please adjust the
+        sliders above and our calculator will tell you how much you actually
+        need for you and your family. It's not an exact science, but you'll see
+        that you actually need a lot less than you think you do.
+      </p>
+      <p class="lead">
+        The average family that is sheltering-in-place has way more toilet paper
+        than they need. Please find someone you know who it in need of toilet
+        paper and share it with them.
+      </p>
+    </div>
   </div>
 </div>
+
+<footer class="page-footer  fixed-bottom font-small black">
+  <div class="footer-copyright text-center py-3">
+    © 2020 Copyright:
+    <a href="https://howmanywipes.com/"> howmanywipes.com</a>
+  </div>
+</footer>
