@@ -13,6 +13,8 @@ const defaultShit: ToiletTrackerModel = {
 };
 
 export class ToiletApp {
+
+    window = window;
     constructor() {
         if (this.toiletTrackerModel = JSON.parse(localStorage.getItem('toiletModel'))) return;
         this.toiletTrackerModel = { ...defaultShit };
@@ -21,11 +23,20 @@ export class ToiletApp {
     get numberOfDaysTillOut() {
         const model = this.toiletTrackerModel;
         localStorage.setItem('toiletModel', JSON.stringify(this.toiletTrackerModel));
-        return (model.numberOfRollsOnHand * model.numberOfSheetsPerRoll) /
+        return ((model.numberOfRollsOnHand * model.numberOfSheetsPerRoll) /
             (
                 (model.numberOfShitsPerDay * model.sheetsPerShit * ((model.numberOfMenInHousehold * 1) + (model.numberOfWomenInHousehold * 1))) +
                 (model.sheetsPerPee * model.numberOfWomenInHousehold * model.numberOfPeesPerDay)
-            );
+            )).toFixed(0);
+    }
+    set numberOfDaysTillOut(val: string) {
+        const value = Number(val);
+        if (!value) {
+            this.toiletTrackerModel.numberOfRollsOnHand = 0;
+            return;
+        }
+        
+        
     }
 
     reset() {

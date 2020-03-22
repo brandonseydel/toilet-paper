@@ -4,6 +4,14 @@
     <meta charset="utf-8" />
     <title>How many wipes? | Roll Tracker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:url" content="https://howmanywipes.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How many wipes? | Roll Tracker" />
+    <meta
+      property="og:description"
+      content="Find you how much toilet paper you need!"
+    />
+    <meta property="og:image" content="https://howmanywipes.com/" />
     <base href="/" />
     <!-- Font Awesome -->
     <link
@@ -25,23 +33,52 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css"
       rel="stylesheet"
     />
-    <script data-ad-client="ca-pub-1434951177795305" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script
+      data-ad-client="ca-pub-1434951177795305"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161548021-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-161548021-1"
+    ></script>
     <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-    
-     gtag('config', 'UA-161548021-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-161548021-1");
     </script>
   </head>
 
   <body>
     <my-app></my-app>
+
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <!-- Your share button code -->
+
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"
     ></script>
+    <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
   </body>
 </html>

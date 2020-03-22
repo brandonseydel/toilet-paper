@@ -1,5 +1,8 @@
 <div class="d-flex  flex-column align-items-center justify-content-start">
-  <h1 id="fixed-header" class="mb-5 text-center w-100 position-sticky fixed-top">
+  <h1
+    id="fixed-header"
+    class="mb-5 text-center w-100 position-sticky fixed-top"
+  >
     <div id="header" class="p-3 mb-2">
       Roll Tracker
     </div>
@@ -10,19 +13,21 @@
       class="text-success"
       style="font-size:2em;"
     >
-      ${numberOfDaysTillOut.toFixed(0) || 0} days
+      <span contenteditable textcontent.bind="numberOfDaysTillOut"> </span> days
     </em>
 
     <div if.bind="numberOfDaysTillOut <= 5" style="font-size:2em;">
       ☠
-      <span class="text-danger" style="font-style:italic;">
-        ${numberOfDaysTillOut.toFixed(0) || 0} days
-      </span>
+      <div contenteditable class="text-danger" style="font-style:italic;">
+        <span contenteditable textcontent.bind="numberOfDaysTillOut"> </span>
+        days
+      </div>
       ☠
     </div>
 
     <div class="mt-2" style="font-size:.75em;">
-      till you are 💩'n in the <i style='color:grey' class="fas fa-shower"></i> !
+      till you are 💩'n in the
+      <i style="color:grey" class="fas fa-shower"></i> !
     </div>
   </h1>
   <div class="col-sm-12 col-md-8">
@@ -97,12 +102,35 @@
     <div class="text-center">
       <button
         style="font-size: 1.2em;text-transform:inherit;"
-        class="m-0 btn blue-gradient btn-lg "
+        class="m-0 btn btn-outline-primary btn-lg "
         type="button"
         click.delegate="reset()"
       >
         Reset to Default 💩
       </button>
+      <button
+        style="font-size: 1.2em;text-transform:inherit;"
+        class="m-0 btn btn-outline-warning btn-lg "
+        type="button"
+        click.delegate="window.scrollTo({ top: 0 })"
+      >
+        Check your 💩
+      </button>
+    </div>
+    <div class="text-center align-middle mt-2">
+      <div
+        class="fb-share-button"
+        data-href="https://howmanywipes.com/"
+        data-layout="button_count"
+      ></div>
+      <a
+        href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+        class="twitter-share-button"
+        data-text="Track you Rolls"
+        data-url="https://howmanywipes.com/"
+        data-show-count="false"
+        >Tweet</a
+      >
     </div>
   </div>
 </div>
