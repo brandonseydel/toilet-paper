@@ -20,7 +20,6 @@
     </em>
 
     <div if.bind="numberOfDaysTillOut <= 5" style="font-size:2em;">
-      ☠
       <div class="text-danger" style="font-style:italic;">
         <span
           contenteditable
@@ -30,7 +29,6 @@
         </span>
         days
       </div>
-      ☠
     </div>
 
     <div class="mt-2" style="font-size:.75em;">
@@ -44,12 +42,14 @@
       <input
         class="form-control form-control-lg"
         value.bind="toiletTrackerModel.numberOfRollsOnHand"
+        step="12"
         type="number"
       />
       <input
         class="custom-range w-50 mt-2"
         value.bind="toiletTrackerModel.numberOfRollsOnHand"
         type="range"
+        step="12"
         min="1"
         max="10000"
       />
