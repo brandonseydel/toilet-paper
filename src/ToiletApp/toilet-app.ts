@@ -29,19 +29,10 @@ export class ToiletApp {
                 (model.sheetsPerPee * model.numberOfWomenInHousehold * model.numberOfPeesPerDay)
             )).toFixed(0);
     }
-    set numberOfDaysTillOut(val: string) {
-        const value = Number(val);
-        if (!value) {
-            this.toiletTrackerModel.numberOfRollsOnHand = 0;
-            return;
-        }
-        
-        
-    }
+
 
     reset() {
         this.toiletTrackerModel = { ...defaultShit };
-
     }
 }
 
