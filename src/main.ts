@@ -1,3 +1,7 @@
 import Aurelia from 'aurelia';
 import { ToiletApp } from './ToiletApp/toilet-app';
-Aurelia.app(ToiletApp).start();
+import { MdbWavesEffect } from './attributes/waves';
+
+
+const aurelia = Aurelia.register(MdbWavesEffect).app(ToiletApp);
+aurelia.start();
